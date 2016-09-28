@@ -23,6 +23,13 @@ a vector of features was obtained by calculating variables from the time and fre
    A full description of the data is available at this website: 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
+* Explanation of the data file
+  *  activity_labels.txt: Dimensioin 6*2 (6 rows, 2 columns). The first column is number 1 to 6, and the second column is the corresponding
+activity names.
+  *  features.txt: 
+  *  README.txt: more information abou the files and data
+  *  features_info.txt: more information about the features (variables).
+
 ## Variables
 *  subject: number from 1 to 30, represents the subjects (volunteers) who did the experiments. The training data were collected from 21
 volunteers and the test data were collected by 9 volunteers.
@@ -68,4 +75,4 @@ fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequ
     *  tBodyGyroJerkMean
 
 ##Transformations of the raw data.
-
+*  
