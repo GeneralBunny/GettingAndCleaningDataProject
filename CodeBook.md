@@ -26,9 +26,16 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 * Explanation of the data file
   *  activity_labels.txt: Dimensioin 6*2 (6 rows, 2 columns). The first column is number 1 to 6, and the second column is the corresponding
 activity names.
-  *  features.txt: 
+  *  features.txt: Dimension 561*2. The first column is number 1 to 561, and the second column is the corresponding features.
+  *  features_info.txt: more information about the features (variables). 
   *  README.txt: more information abou the files and data
-  *  features_info.txt: more information about the features (variables).
+  *  subject_test.txt: Dimension 2947*1. It denotes the subject (volunteer) who did each of the measurements of the test data.
+  *  X_test.txt: Dimension Dimension 2947*561. It contains the data of 561 different features, and each feature has 7352 measurements from the test data.
+  *  y_test.txt: Dimension 2947*1. It denotes the activity that each of the measurement is corresponding to from the test data.
+  *  subject_train.txt: Same as subject_test.txt exceptthe dimension is 7352*1, and the data are from the training set.
+  *  X_train.txt: Same as X_test.txt except the dimension is 7352*561, and the data are from the training set.
+  *  y_train.txt: Same as y_test except the dimension is 7352*1, and the data are from the training set.
+  *  The "Inertial Signals" of both the test and training sets are not used in this data analysis.
 
 ## Variables
 *  subject: number from 1 to 30, represents the subjects (volunteers) who did the experiments. The training data were collected from 21
@@ -75,4 +82,22 @@ fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequ
     *  tBodyGyroJerkMean
 
 ##Transformations of the raw data.
-*  
+*  Download the data into folder "/Project". Both the training and the test data are read
+into data frame. Also the features.txt and activity_labels are read into data frame as well.
+*  Step 1: Merge the training and the test sets to create one data set. The group ("train" or "test"), subject and 
+activity are bound to both training and test data and properly named before they are combined inot a single data set
+("Total",10299 rows, 564 columns).
+*  Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. The positions
+of the features which are mean and standard deviation are located (total 79 features) and them passed to select 
+from "Total". The group ("train" or "test"), subject and activity are preseved, and the new data is called "MeanStd"
+(10299 rows, 82 columns).
+*  Step 3: Use descriptive activity names to name the activities in "MeanStd". Each activity in "MeanStd" (from 1 to 6)
+is labeled with the names in activity_labels.txt.
+*  Step 4: Appropriately labels the "MeanStd" data set with descriptive variable names in features.txt. Also some of 
+the abbreviation is spelled out: t is time, f is frequency, Acc is Accelerometer, Gyro is Gyroscope, Mag is Magnitude,
+BodyBody is just Body.
+*  Step 5: From the data set in the last step, creates a second independant tidy data set with the average of each
+variable for each activity and each subject. The output TidyData.txt contains the average of each variable for each
+activity (total 6) and each subject (total 30). Thus it has 3*60=180 rows and 81 columns (subject + activity+
+79 features/variables).
+
