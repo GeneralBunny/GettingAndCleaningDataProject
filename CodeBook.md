@@ -80,6 +80,9 @@ fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequ
     *  tBodyAccJerkMean
     *  tBodyGyroMean
     *  tBodyGyroJerkMean
+  *  All the data that are related to accelerometer (containing "Acc" in the name) have the unit of the standard
+gravity units "g"
+  *  All the data that are related to gyroscope (containing "Gyro" in the name) have the unit of radians/second.
 
 ##Transformations of the raw data.
 *  Download the data into folder "/Project". Both the training and the test data are read
