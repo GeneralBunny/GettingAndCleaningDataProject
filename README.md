@@ -12,3 +12,4 @@ the same folder. The output of the R script is a tidy date set: TidyData.txt.
   *   tidydata<-read.table("TidyData.txt", header=TRUE)<br />
 View(tidydata) 
 *  More information about the data and the analysis can be found in the CodeBook.md
+*  License: written by GeneralBunny, Sep.29, 2016.
