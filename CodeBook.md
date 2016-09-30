@@ -94,7 +94,7 @@ from "Total". The group ("train" or "test"), subject and activity are preseved, 
 *  Step 3: Use descriptive activity names to name the activities in "MeanStd". Each activity in "MeanStd" (from 1 to 6)
 is labeled with the names in activity_labels.txt.
 *  Step 4: Appropriately labels the "MeanStd" data set with descriptive variable names in features.txt. Also some of 
-the abbreviation is spelled out: t is time, f is frequency, Acc is Accelerometer, Gyro is Gyroscope, Mag is Magnitude,
+the abbreviations are spelled out: t is time, f is frequency, Acc is Accelerometer, Gyro is Gyroscope, Mag is Magnitude,
 BodyBody is just Body.
 *  Step 5: From the data set in the last step, creates a second independant tidy data set with the average of each
 variable for each activity and each subject. The output TidyData.txt contains the average of each variable for each
