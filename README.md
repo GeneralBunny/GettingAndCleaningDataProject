@@ -10,5 +10,5 @@ of this project is to demonstrate your ability to collect, work with and clean a
 the same folder. The output of the R script is a tidy date set: TidyData.txt.
 *  To read TidyData.txt back into R, use the following code
   *   tidydata<-read.table("TidyData.txt", header=TRUE)
-      View(tidydata) 
+View(tidydata) 
 *  More information about the data and the analysis can be found in the CodeBook.md
